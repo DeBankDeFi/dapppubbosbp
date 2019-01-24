@@ -15,7 +15,6 @@ public:
         {};
     void claim();
 private:
-    // @abi table producers i64 
     struct producer_info {
         account_name          owner;
         double                total_votes = 0;
