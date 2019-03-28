@@ -1,7 +1,7 @@
 #include "dapppubbosbp.hpp"
 
 void dapppubbosbp::claim(account_name producer) {
-    require_auth(_self);
+    eosio_assert(is_account(producer) || is_account(_self), "auth failed");
     const auto& prod = _producers.get(producer, "unable to find your producer");
     const uint32_t claim_time = prod.last_claim_time.sec_since_epoch() + sec_per_day + 1;
     if (now() >= claim_time) {
