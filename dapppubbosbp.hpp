@@ -16,7 +16,7 @@ public:
             _producers(N(eosio), N(eosio)),
             _global(N(eosio), N(eosio))
         {};
-    void claim();
+    void claim(account_name producer);
 private:
     struct eosio_global_state : blockchain_parameters {
         uint64_t free_ram()const { return max_ram_size - total_ram_bytes_reserved; }
