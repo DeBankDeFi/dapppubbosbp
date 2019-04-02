@@ -1,6 +1,6 @@
 # dapppubbosbp
 
-Help BP auto claim rewards
+Help BP auto-claim rewards
 
 ## EOS Mainnet
 
